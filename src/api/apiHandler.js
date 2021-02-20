@@ -50,4 +50,18 @@ export default {
       .then((res) => res.data)
       .catch(errorHandler);
   },
+
+  getArgonautes() {
+    return service
+      .get("/api/argonaute")
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
+  addArgonaute(data) {
+    return service
+      .post("/api/argonaute", data)
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
 };

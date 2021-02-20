@@ -1,13 +1,12 @@
 import React from "react";
 
-export default function NameLisr({ allNames, handleDelete }) {
+export default function NameList({ allNames, handleDelete }) {
   return (
     <ol>
-      {allNames.map(({ name, id }) => (
-        <li key={id}>
+      {allNames.map(({ name, _id }) => (
+        <li key={_id}>
           <div>
-            <h2>{name}</h2>
-            <button onClick={() => handleDelete(id)}>X</button>
+            <p>{name}</p>
           </div>
         </li>
       ))}
